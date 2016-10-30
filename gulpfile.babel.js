@@ -3,6 +3,7 @@
 import gulp from 'gulp';
 import del from 'del';
 import eslint from 'gulp-eslint';
+import flow from 'gulp-flowtype';
 import webpack from 'webpack-stream';
 import webpackConfig from './webpack.config.babel';
 
@@ -54,5 +55,5 @@ gulp.task('lint', () =>
   .pipe(eslint())
   .pipe(eslint.format())
   .pipe(eslint.failAfterError())
+  .pipe(flow({ abort: true })) // Add Flow here
 );
-
