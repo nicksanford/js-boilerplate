@@ -8,4 +8,4 @@ class Dog {
   }
 }
 
-export default Dog
+export default Dog;
